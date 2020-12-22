@@ -10,6 +10,13 @@ class MovieList extends Component {
           </li>
         );
       }
+      if (name) {
+        return (
+          <li key={id}>
+            <Link to={`/movies/movie/${id}`}>{name}</Link>
+          </li>
+        );
+      }
     });
     return searchedMovies;
   };
